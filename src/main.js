@@ -3,10 +3,9 @@
  * import LoL from './data/lol/lol.js'
  * import POTTER from './data/potter/potter.js'
  */
+import  dataSet  from './data/rickandmorty/rickandmorty.js';
 
-import { example } from './data.js';
-
-console.log(example);
+console.log(dataSet);
 
 /*
  * console.log(POKEMON);
