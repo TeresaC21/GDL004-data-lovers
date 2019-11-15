@@ -7,12 +7,12 @@
 };
 */
 
-  export const character = (species) => {
-    species: "alien", 
+  export const example = (species) => {
+    /*species: "alien", 
     {
     species: "human",
     },
-    humans = characters.filter(character =>character.species= "human");
-    return 'character';
-    },
+    humans = characters.filter(character =>character.species= "human");*/
+    return 'example';
+    }
  
