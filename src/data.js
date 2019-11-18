@@ -5,3 +5,4 @@ console.log(resultMap);
 resultMap.forEach((value, key) => {
   console.log(key + '=' + value.species);
 });
+
