@@ -21,6 +21,7 @@ const twelveSpecies = allSpecies.filter(different);
 console.log(twelveSpecies, 'twelve species');
 
 
+
 export {
   humans,
   aliens,
@@ -35,4 +36,5 @@ export {
   diseases,
   parasites,
   twelveSpecies
+
 };

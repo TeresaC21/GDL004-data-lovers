@@ -12,6 +12,7 @@ import {
   cronenbergs,
   diseases,
   parasites,
+
   twelveSpecies
 } from './data.js';
 
