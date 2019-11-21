@@ -12,23 +12,57 @@ import {
   cronenbergs,
   diseases,
   parasites,
+
+  twelveSpecies
 } from './data.js';
 
-const showInfoToHumans = (humans) => {
-  for (let i = 0; i < humans.length; i++) {
+const idHuman = document.querySelector('#imgHumano');
+const idAlien = document.querySelector('#imgAlien');
+const idRobot = document.querySelector('#imgRobot');
+const idHumanoide = document.querySelector('#imgHumanoide');
+const idParasite = document.querySelector('#imgParasito');
+/*const idIdunknown = document.querySelector('#img');
+const idPoopybuttbole = document.querySelector('#img');
+const idMytholog = document.querySelector('#img');
+const idAnimal = document.querySelector('#img');
+const idVampire = document.querySelector('#img');
+const idCronenberg = document.querySelector('#img');
+const idDisease = document.querySelector('#img');*/
+
+const showInfoToHumans = (showHumans) => {
+  for (let i = 0; i < showHumans.length; i++) {
     const allHumans = document.createElement('div');
     allHumans.className = 'characters';
-    allHumans.innerHTML = `<p>${humans[i].name}</p> ` + `<img src=${humans[i].image}></img>`
+    allHumans.innerHTML = `<p>${showHumans[i].name}</p> ` + `<img src=${showHumans[i].image}></img>` + `<p>${showHumans[i].species}</p>`
     document.querySelector('#fin').appendChild(allHumans);
   }
 }
-document.querySelector('#imgHumano').addEventListener('click',
+idHuman.addEventListener('click',
   () => {
-    document.querySelector('#imgAlien').classList.add('esconder');
-    document.querySelector('#imgRobot').classList.add('esconder');
-    document.querySelector('#imgHumanoide').classList.add('esconder');
-    document.querySelector('#imgParasito').classList.add('esconder');
-    // aqui traeriamos la data.js
-    document.querySelector('#resultadosHum').classList.remove('esconder');
-    document.querySelector('#resultadosHum').textContent = showInfoToHumans (dataSet.results);
+    idAlien.classList.add('esconder');
+    idRobot.classList.add('esconder');
+    idHumanoide.classList.add('esconder');
+    idParasite.classList.add('esconder');
+    // aqui traemos la data de humanos
+    document.querySelector('#resultados').classList.remove('esconder');
+    document.querySelector('#resultados').textContent = showInfoToHumans(humans);
   });
+  const showInfoToAliens = (showAliens) => {
+    for (let i = 0; i < showAliens.length; i++) {
+      const allAliens = document.createElement('div');
+      allAliens.className = 'characters';
+      allAliens.innerHTML = `<p>${showAliens[i].name}</p> ` + `<img src=${showAliens[i].image}></img>` + `<p>${showAliens[i].species}</p>`
+      document.querySelector('#fin').appendChild(allAliens);
+    }
+  }
+  idAlien.addEventListener('click',
+    () => {
+      idHuman.classList.add('esconder');
+      idRobot.classList.add('esconder');
+      idHumanoide.classList.add('esconder');
+      idParasite.classList.add('esconder');
+      // aqui traemos la data de humanos
+      document.querySelector('#resultados').classList.remove('esconder');
+      document.querySelector('#resultados').textContent = showInfoToAliens(aliens);
+    });
+  

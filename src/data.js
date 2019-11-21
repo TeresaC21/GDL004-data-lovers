@@ -13,17 +13,14 @@ const cronenbergs = dataSet.results.filter((cronenberg) => cronenberg.species ==
 const diseases = dataSet.results.filter((disease) => disease.species === 'Disease');
 const parasites = dataSet.results.filter((parasite) => parasite.species === 'Parasite');
 
-/* adding all different species
-const allSpecies = dataSet.results.map((specie) =>
-{ //trae todas las especies de la data
-return specie.species;
-});
-const different = (valor, indice, self) =>
- {
-  return self.indexOf(valor) === indice;
-}
+//  adding all of differents species
+const allSpecies = dataSet.results.map((specie) => specie.species);
+console.log(allSpecies);
+const different = (valor, indice, self) => self.indexOf(valor) === indice;
 const twelveSpecies = allSpecies.filter(different);
-console.log(twelveSpecies, 'twelve Species'), */
+console.log(twelveSpecies, 'twelve species');
+
+
 
 export {
   humans,
@@ -38,4 +35,6 @@ export {
   cronenbergs,
   diseases,
   parasites,
+  twelveSpecies
+
 };
