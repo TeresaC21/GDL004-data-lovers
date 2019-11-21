@@ -1,7 +1,8 @@
-/* Manejo de data */
+import dataSet from './data/rickandmorty/rickandmorty.js';
 
-// esta es una función de ejemplo
+const resultMap = new Map(Object.entries(dataSet.results));
+console.log(resultMap);
+resultMap.forEach((value, key) => {
+  console.log(key + '=' + value.species);
+});
 
-export const example = () => {
-  return 'example';
-};

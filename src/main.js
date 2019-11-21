@@ -1,3 +1,4 @@
+
 /**
  * import POKEMON from './data/pokemon/pokemon.js'
  * import LoL from './data/lol/lol.js'
@@ -15,3 +16,4 @@ console.log(dataSet);
  * console.log(POTTER)
  * console.log(RICK)
 */
+
