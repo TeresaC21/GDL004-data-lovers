@@ -33,6 +33,7 @@ const orderSort = Array.from(arr).sort((a, b) => {
   if (a.species.toLowerCase() < b.species.toLowerCase()) return -1 });
 console.log(orderSort);
 
+
 export {
   humans,
   aliens,

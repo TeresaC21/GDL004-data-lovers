@@ -62,7 +62,7 @@ idHuman.addEventListener('click', () => {
         document.querySelector('#container').classList.remove('esconder');
         document.querySelector('#resultados').textContent = showInfo(orderSort.humans);
       });
-      
+
       
       /*document.querySelector("#btnOrder").addEventListener("click", () => {
         let showSort = (orderSort);
