@@ -12,10 +12,14 @@ import {
   cronenbergs,
   diseases,
   parasites,
-
-  twelveSpecies
+  twelveSpecies,
+  episodes,
+  orderSort,
+  //tipos
 } from './data.js';
 
+const idBotton = document.querySelector('#btnOrder');
+const idContainer = document.querySelector('#contenedor');
 const idHuman = document.querySelector('#imgHumano');
 const idAlien = document.querySelector('#imgAlien');
 const idRobot = document.querySelector('#imgRobot');
@@ -29,40 +33,61 @@ const idVampire = document.querySelector('#img');
 const idCronenberg = document.querySelector('#img');
 const idDisease = document.querySelector('#img');*/
 
-const showInfoToHumans = (showHumans) => {
-  for (let i = 0; i < showHumans.length; i++) {
-    const allHumans = document.createElement('div');
-    allHumans.className = 'characters';
-    allHumans.innerHTML = `<p>${showHumans[i].name}</p> ` + `<img src=${showHumans[i].image}></img>` + `<p>${showHumans[i].species}</p>`
-    document.querySelector('#fin').appendChild(allHumans);
+const showInfo = (showTypes) => {
+  for (let i = 0; i < showTypes.length; i++) {
+    const allTypes = document.createElement('div');
+    allTypes.className = 'characters';
+    allTypes.innerHTML =  `<img src=${showTypes[i].image}></img>` +  `<p>${showTypes[i].name}</p>` + `<p>${showTypes[i].species}</p>` + `<p>${showTypes[i].status}</p>`
+    document.querySelector('#resultados').appendChild(allTypes);
   }
 }
-idHuman.addEventListener('click',
-  () => {
-    idAlien.classList.add('esconder');
-    idRobot.classList.add('esconder');
-    idHumanoide.classList.add('esconder');
-    idParasite.classList.add('esconder');
+
+idHuman.addEventListener('click', () => {
+    idContainer.classList.add('esconder');
     // aqui traemos la data de humanos
     document.querySelector('#resultados').classList.remove('esconder');
-    document.querySelector('#resultados').textContent = showInfoToHumans(humans);
+    document.querySelector('.characters').textContent = showInfo(humans);
   });
-  const showInfoToAliens = (showAliens) => {
-    for (let i = 0; i < showAliens.length; i++) {
-      const allAliens = document.createElement('div');
-      allAliens.className = 'characters';
-      allAliens.innerHTML = `<p>${showAliens[i].name}</p> ` + `<img src=${showAliens[i].image}></img>` + `<p>${showAliens[i].species}</p>`
-      document.querySelector('#fin').appendChild(allAliens);
-    }
-  }
-  idAlien.addEventListener('click',
-    () => {
-      idHuman.classList.add('esconder');
-      idRobot.classList.add('esconder');
-      idHumanoide.classList.add('esconder');
-      idParasite.classList.add('esconder');
-      // aqui traemos la data de humanos
+ 
+  idAlien.addEventListener('click',() => {
+    idContainer.classList.add('esconder');
+      // aqui traemos la data de Aliens
       document.querySelector('#resultados').classList.remove('esconder');
-      document.querySelector('#resultados').textContent = showInfoToAliens(aliens);
+      document.querySelector('#btnOrder').textContent =  showInfo(aliens);
     });
   
+    idBotton.addEventListener('click',() => {
+        document.querySelector('#inicio').classList.add('esconder');
+        // 
+        document.querySelector('#container').classList.remove('esconder');
+        document.querySelector('#resultados').textContent = showInfo(orderSort.humans);
+      });
+
+      
+      /*document.querySelector("#btnOrder").addEventListener("click", () => {
+        let showSort = (orderSort);
+        document.getElementById("resultados").innerHTML = ""
+      })
+
+    /*idHuman.addEventListener('click', () => {
+        // aqui traemos la data de humanos
+        document.querySelector('#resultados').classList.remove('esconder');
+        document.querySelector('#btnOrder').textContent = showInfo(twelveSpecies);
+      });
+    /* idBotton.addEventListener('click',() => {
+      idHuman.classList.add('esconder');
+      document.querySelector('#mostrarEpisodios').classList.remove('esconder');
+      document.querySelector('#resultados').textContent = showInfo(episodes);
+      console.logshowInfoToEpis(episodes)
+    });
+    */
+
+/*const showInfoToAliens = (showAliens) => {
+aliens.map((personaje)=>{
+let span = document.createElement("span");
+const template = `<div class="name">${personaje.name}</div>
+<img src=${personaje.image}></img>`
+span.innerHTML = template;
+document.getElementById("fin").appendChild(span);
+})*/
+    
