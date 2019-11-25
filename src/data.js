@@ -20,8 +20,6 @@ const different = (valor, indice, self) => self.indexOf(valor) === indice;
 const twelveSpecies = allSpecies.filter(different);
 console.log(twelveSpecies, 'twelve species');
 
-
-
 export {
   humans,
   aliens,
@@ -35,6 +33,6 @@ export {
   cronenbergs,
   diseases,
   parasites,
-  twelveSpecies
+  twelveSpecies,
 
 };

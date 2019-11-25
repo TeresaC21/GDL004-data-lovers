@@ -47,22 +47,21 @@ idHuman.addEventListener('click',
     document.querySelector('#resultados').classList.remove('esconder');
     document.querySelector('#resultados').textContent = showInfoToHumans(humans);
   });
-  const showInfoToAliens = (showAliens) => {
-    for (let i = 0; i < showAliens.length; i++) {
-      const allAliens = document.createElement('div');
-      allAliens.className = 'characters';
-      allAliens.innerHTML = `<p>${showAliens[i].name}</p> ` + `<img src=${showAliens[i].image}></img>` + `<p>${showAliens[i].species}</p>`
-      document.querySelector('#fin').appendChild(allAliens);
-    }
+const showInfoToAliens = (showAliens) => {
+  for (let i = 0; i < showAliens.length; i++) {
+    const allAliens = document.createElement('div');
+    allAliens.className = 'characters';
+    allAliens.innerHTML = `<p>${showAliens[i].name}</p> ` + `<img src=${showAliens[i].image}></img>` + `<p>${showAliens[i].species}</p>`
+    document.querySelector('#fin').appendChild(allAliens);
   }
-  idAlien.addEventListener('click',
-    () => {
-      idHuman.classList.add('esconder');
-      idRobot.classList.add('esconder');
-      idHumanoide.classList.add('esconder');
-      idParasite.classList.add('esconder');
-      // aqui traemos la data de humanos
-      document.querySelector('#resultados').classList.remove('esconder');
-      document.querySelector('#resultados').textContent = showInfoToAliens(aliens);
-    });
-  
+}
+idAlien.addEventListener('click',
+  () => {
+    idHuman.classList.add('esconder');
+    idRobot.classList.add('esconder');
+    idHumanoide.classList.add('esconder');
+    idParasite.classList.add('esconder');
+    // aqui traemos la data de humanos
+    document.querySelector('#resultados').classList.remove('esconder');
+    document.querySelector('#resultados').textContent = showInfoToAliens(aliens);
+  });
