@@ -1,6 +1,10 @@
 import dataSet from './data/rickandmorty/rickandmorty.js';
-// filtering species
-const humans = dataSet.results.filter((human) => human.species === 'Human');
+/*let evento = e.target.id;
+const tipos = dataSet.results.filter((tipo) => {
+ if (tipo.species === evento);
+})*/
+//********** Filter species ********** 
+const humans = dataSet.results.filter((human) => human.species === "Human");
 const aliens = dataSet.results.filter((alien) => alien.species === 'Alien');
 const humanoids = dataSet.results.filter((humanoid) => humanoid.species === 'Humanoid');
 const unknowns = dataSet.results.filter((unkno) => unkno.species === 'unknown');
@@ -12,6 +16,9 @@ const robots = dataSet.results.filter((robot) => robot.species === 'Robot');
 const cronenbergs = dataSet.results.filter((cronenberg) => cronenberg.species === 'Cronenberg');
 const diseases = dataSet.results.filter((disease) => disease.species === 'Disease');
 const parasites = dataSet.results.filter((parasite) => parasite.species === 'Parasite');
+const episodes = dataSet.results.filter((episode) => episode.species === 'Episode');
+
+
 
 //  adding all of differents species
 const allSpecies = dataSet.results.map((specie) => specie.species);
@@ -19,6 +26,13 @@ console.log(allSpecies);
 const different = (valor, indice, self) => self.indexOf(valor) === indice;
 const twelveSpecies = allSpecies.filter(different);
 console.log(twelveSpecies, 'twelve species');
+
+//************ Sort order **********
+let arr = dataSet.results;
+const orderSort = Array.from(arr).sort((a, b) => { 
+  if (a.species.toLowerCase() < b.species.toLowerCase()) return -1 });
+console.log(orderSort);
+
 
 export {
   humans,
@@ -34,5 +48,11 @@ export {
   diseases,
   parasites,
   twelveSpecies,
+<<<<<<< HEAD
 
+=======
+  episodes,
+  orderSort,
+ // tipos
+>>>>>>> 20d16c47a1121a1fef989d6eed31669a789bdb9f
 };
