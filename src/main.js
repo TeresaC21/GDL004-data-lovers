@@ -42,7 +42,8 @@ function newFunction(event) {
   if (eventId === 'imgHumano') {
     document.querySelector('#btnOrder').className = 'humans';
     document.querySelector('.characters').textContent = showInfo(humans);
-  } if (eventId === 'imgAlien') {
+  }
+  if (eventId === 'imgAlien') {
     document.querySelector('#btnOrder').className = 'aliens';
     document.querySelector('.characters').textContent = showInfo(aliens);
   }
@@ -59,8 +60,42 @@ idBotton.addEventListener('click', (event) => {
   const eventClassName = event.currentTarget.className;
   if (eventClassName === 'humans') {
     sortedByName = sortAnythingByName(humans);
-  } if (eventClassName === 'aliens') {
+  }
+  if (eventClassName === 'aliens') {
     sortedByName = sortAnythingByName(aliens);
+  }
+  if (eventClassName === 'humanoids') {
+    sortedByName = sortAnythingByName(humanoids);
+  }
+  if (eventClassName === 'unknowns') {
+    sortedByName = sortAnythingByName(unknowns);
+  }
+  if (eventClassName === 'poopybuttholes') {
+    sortedByName = sortAnythingByName(poopybuttholes);
+  }
+  if (eventClassName === 'mythologs') {
+    sortedByName = sortAnythingByName(mythologs);
+  }
+  if (eventClassName === 'animals') {
+    sortedByName = sortAnythingByName(animals);
+  }
+  if (eventClassName === 'vampires') {
+    sortedByName = sortAnythingByName(vampires);
+  }
+  if (eventClassName === 'robots') {
+    sortedByName = sortAnythingByName(robots);
+  }
+  if (eventClassName === 'cronenbergs') {
+    sortedByName = sortAnythingByName(cronenbergs);
+  }
+  if (eventClassName === 'vampires') {
+    sortedByName = sortAnythingByName(vampires);
+  }
+  if (eventClassName === 'diseases') {
+    sortedByName = sortAnythingByName(diseases);
+  }
+  if (eventClassName === 'parasites') {
+    sortedByName = sortAnythingByName(parasites);
   }
   document.querySelector('#resultados').innerHTML = '';
   document.querySelector('resultados').textContent = showInfo(sortedByName);

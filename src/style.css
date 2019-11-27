@@ -118,7 +118,6 @@ h2 {
   color: gray;
   animation-duration: 3s;
   animation-name: slidein;
-  animation-iteration-count: ;
   animation-direction: alternate;
 }
 
