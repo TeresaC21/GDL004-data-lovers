@@ -12,7 +12,7 @@ import {
   cronenbergs,
   diseases,
   parasites,
-  sortAnythingByName,
+  sortAnythingByName
 } from './data.js';
 
 const imgCharacters = document.querySelectorAll('.imgCharacters');
@@ -32,6 +32,7 @@ document.querySelector('#btnInicio').addEventListener('click', () => {
   document.querySelector('#inicio').classList.add('esconder');
   document.querySelector('#contenedor').classList.remove('esconder');
 });
+
 // funcion para ejecutar el e.currentTarget
 function newFunction(event) {
   const eventId = event.currentTarget.id;

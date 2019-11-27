@@ -1,5 +1,6 @@
 import dataSet from './data/rickandmorty/rickandmorty.js';
 
+
 // ********** Filter species **********
 const humans = dataSet.results.filter((human) => human.species === 'Human');
 const aliens = dataSet.results.filter((alien) => alien.species === 'Alien');
