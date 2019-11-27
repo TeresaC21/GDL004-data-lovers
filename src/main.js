@@ -45,6 +45,36 @@ function newFunction(event) {
   } if (eventId === 'imgAlien') {
     document.querySelector('#btnOrder').className = 'aliens';
     document.querySelector('.characters').textContent = showInfo(aliens);
+  } if (eventId === 'imgHumanoide') {
+    document.querySelector('#btnOrder').className = 'humanoids';
+    document.querySelector('.characters').textContent = showInfo(humanoids);
+  } if (eventId === 'imgUnknown') {
+    document.querySelector('#btnOrder').className = 'unknowns';
+    document.querySelector('.characters').textContent = showInfo(unknowns);   
+  } if (eventId === 'imgPoopybutthole') {
+    document.querySelector('#btnOrder').className = 'poopybuttholes';
+    document.querySelector('.characters').textContent = showInfo(poopybuttholes);
+  } if (eventId === 'imgMytholog') {
+    document.querySelector('#btnOrder').className = 'mythologs';
+    document.querySelector('.characters').textContent = showInfo(mythologs);
+  } if (eventId === 'imgAnimal') {
+    document.querySelector('#btnOrder').className = 'animals';
+    document.querySelector('.characters').textContent = showInfo(animals);
+  } if (eventId === 'imgVampire') {
+    document.querySelector('#btnOrder').className = 'vampires';
+    document.querySelector('.characters').textContent = showInfo(vampires);
+  } if (eventId === 'imgRobot') {
+    document.querySelector('#btnOrder').className = 'robots';
+    document.querySelector('.characters').textContent = showInfo(robots);
+  } if (eventId === 'imgCronenberg') {
+    document.querySelector('#btnOrder').className = 'cronenbergs';
+    document.querySelector('.characters').textContent = showInfo(cronenbergs);
+  } if (eventId === 'imgDiseas') {
+    document.querySelector('#btnOrder').className = 'diseases';
+    document.querySelector('.characters').textContent = showInfo(diseases);
+  } if (eventId === 'imgParasito') {
+    document.querySelector('#btnOrder').className = 'parasites';
+    document.querySelector('.characters').textContent = showInfo(parasites);
   }
 }
 
@@ -64,4 +94,4 @@ idBotton.addEventListener('click', (event) => {
   }
   document.querySelector('#resultados').innerHTML = '';
   document.querySelector('resultados').textContent = showInfo(sortedByName);
-});
+})
