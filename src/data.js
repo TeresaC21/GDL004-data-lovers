@@ -1,8 +1,9 @@
 import dataSet from './data/rickandmorty/rickandmorty.js';
 
-//********** Filter species ********** 
-const humans = dataSet.results.filter((human) => human.species === "Human");
-const aliens = dataSet.results.filter((alien) => alien.species === "Alien");
+
+// ********** Filter species **********
+const humans = dataSet.results.filter((human) => human.species === 'Human');
+const aliens = dataSet.results.filter((alien) => alien.species === 'Alien');
 const humanoids = dataSet.results.filter((humanoid) => humanoid.species === 'Humanoid');
 const unknowns = dataSet.results.filter((unkno) => unkno.species === 'unknown');
 const poopybuttholes = dataSet.results.filter((poopybutthole) => poopybutthole.species === 'Poopybutthole');
@@ -17,7 +18,7 @@ const episodes = dataSet.results.filter((episode) => episode.species === 'Episod
 
 const sortAnythingByName = (array) => {
   return array.sort((a, b) => ((a.name < b.name) ? -1 : 1));
-}
+};
 
 export {
   humans,
@@ -32,5 +33,5 @@ export {
   cronenbergs,
   diseases,
   parasites,
-  sortAnythingByName
+  sortAnythingByName,
 };
