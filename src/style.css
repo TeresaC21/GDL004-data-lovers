@@ -84,11 +84,11 @@
 #inicio {
   /* background-image: url('img/espacio.jpeg');*/
   /* background-image: url('img/espacio3d1.gif');*/
+  background-image: url('img/rick.png');
   min-height: 90vh;
   min-width: 100vh;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url('img/rick.png');
   position: relative;
   padding: auto;
   display: flex;
@@ -169,7 +169,10 @@ h2 {
 }
 
 #btnFin {
-  margin-block-start: auto;
+  margin: 0;
+  position: absolute;
+  top: 0px;
+  left: 2px;
 }
 
 .modal {

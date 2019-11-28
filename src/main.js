@@ -32,6 +32,11 @@ document.querySelector('#btnInicio').addEventListener('click', () => {
   document.querySelector('#inicio').classList.add('esconder');
   document.querySelector('#contenedor').classList.remove('esconder');
 });
+document.querySelector('#btnFin').addEventListener('click', () => {
+  document.querySelector('#contenedor').classList.add('esconder');
+  document.querySelector('#resultados').classList.add('esconder');
+  document.querySelector('#inicio').classList.remove('esconder');
+});
 
 // funcion para ejecutar el e.currentTarget
 function newFunction(event) {
@@ -41,41 +46,41 @@ function newFunction(event) {
   document.querySelector('#resultados').classList.remove('esconder');
   if (eventId === 'imgHumano') {
     document.querySelector('#btnOrder').className = 'humans';
-    document.querySelector('.characters').textContent = showInfo(humans);
+    document.querySelector('.characters').innerHTML = showInfo(humans);
   }
   if (eventId === 'imgAlien') {
     document.querySelector('#btnOrder').className = 'aliens';
-    document.querySelector('.characters').textContent = showInfo(aliens);
+    document.querySelector('.characters').innerHTML = showInfo(aliens);
   } if (eventId === 'imgHumanoide') {
     document.querySelector('#btnOrder').className = 'humanoids';
-    document.querySelector('.characters').textContent = showInfo(humanoids);
+    document.querySelector('.characters').innerHTML = showInfo(humanoids);
   } if (eventId === 'imgUnknown') {
     document.querySelector('#btnOrder').className = 'unknowns';
-    document.querySelector('.characters').textContent = showInfo(unknowns);   
+    document.querySelector('.characters').innerHTML = showInfo(unknowns);   
   } if (eventId === 'imgPoopybutthole') {
     document.querySelector('#btnOrder').className = 'poopybuttholes';
-    document.querySelector('.characters').textContent = showInfo(poopybuttholes);
+    document.querySelector('.characters').innerHTML = showInfo(poopybuttholes);
   } if (eventId === 'imgMytholog') {
     document.querySelector('#btnOrder').className = 'mythologs';
-    document.querySelector('.characters').textContent = showInfo(mythologs);
+    document.querySelector('.characters').innerHTML = showInfo(mythologs);
   } if (eventId === 'imgAnimal') {
     document.querySelector('#btnOrder').className = 'animals';
-    document.querySelector('.characters').textContent = showInfo(animals);
+    document.querySelector('.characters').innerHTML = showInfo(animals);
   } if (eventId === 'imgVampire') {
     document.querySelector('#btnOrder').className = 'vampires';
-    document.querySelector('.characters').textContent = showInfo(vampires);
+    document.querySelector('.characters').innerHTML = showInfo(vampires);
   } if (eventId === 'imgRobot') {
     document.querySelector('#btnOrder').className = 'robots';
-    document.querySelector('.characters').textContent = showInfo(robots);
+    document.querySelector('.characters').innerHTML = showInfo(robots);
   } if (eventId === 'imgCronenberg') {
     document.querySelector('#btnOrder').className = 'cronenbergs';
-    document.querySelector('.characters').textContent = showInfo(cronenbergs);
+    document.querySelector('.characters').innerHTML = showInfo(cronenbergs);
   } if (eventId === 'imgDiseas') {
     document.querySelector('#btnOrder').className = 'diseases';
-    document.querySelector('.characters').textContent = showInfo(diseases);
+    document.querySelector('.characters').innerHTML = showInfo(diseases);
   } if (eventId === 'imgParasito') {
     document.querySelector('#btnOrder').className = 'parasites';
-    document.querySelector('.characters').textContent = showInfo(parasites);
+    document.querySelector('.characters').innerHTML = showInfo(parasites);
   }
 }
 
@@ -85,7 +90,7 @@ imgCharacters.forEach((elem) => {
   });
 });
 
-idBotton.addEventListener('click', (event) => {
+  idBotton.addEventListener('click', (event) => {
   let sortedByName = [];
   const eventClassName = event.currentTarget.className;
   if (eventClassName === 'humans') {
