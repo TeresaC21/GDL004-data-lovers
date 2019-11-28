@@ -38,49 +38,55 @@ document.querySelector('#btnFin').addEventListener('click', () => {
   document.querySelector('#inicio').classList.remove('esconder');
 });
 
+document.querySelector('#btnFin').addEventListener('click', () => {	
+    document.querySelector('#contenedor').classList.add('esconder');	
+    document.querySelector('#resultados').classList.add('esconder');		
+    document.querySelector('#inicio').classList.remove('esconder');
+});
 // funcion para ejecutar el e.currentTarget
 function newFunction(event) {
   const eventId = event.currentTarget.id;
   idContainer.classList.add('esconder');
   // aqui traemos la data de humanos
   document.querySelector('#resultados').classList.remove('esconder');
+  event.preventDefault()
   if (eventId === 'imgHumano') {
     document.querySelector('#btnOrder').className = 'humans';
-    document.querySelector('.characters').innerHTML = showInfo(humans);
-  }
-  if (eventId === 'imgAlien') {
+    document.querySelectorAll('#resultados').innerHTML = showInfo(humans);
+  } if (eventId === 'imgAlien') {
     document.querySelector('#btnOrder').className = 'aliens';
-    document.querySelector('.characters').innerHTML = showInfo(aliens);
+    document.querySelectorAll('#resultados').innerHTML = showInfo(aliens);
   } if (eventId === 'imgHumanoide') {
     document.querySelector('#btnOrder').className = 'humanoids';
-    document.querySelector('.characters').innerHTML = showInfo(humanoids);
+    document.querySelectorAll('.resultados').innerHTML = showInfo(humanoids);
   } if (eventId === 'imgUnknown') {
     document.querySelector('#btnOrder').className = 'unknowns';
-    document.querySelector('.characters').innerHTML = showInfo(unknowns);   
+    document.querySelectorAll('.resultados').innerHTML = showInfo(unknowns);   
   } if (eventId === 'imgPoopybutthole') {
     document.querySelector('#btnOrder').className = 'poopybuttholes';
-    document.querySelector('.characters').innerHTML = showInfo(poopybuttholes);
+    document.querySelectorAll('.resultados').innerHTML = showInfo(poopybuttholes);
   } if (eventId === 'imgMytholog') {
     document.querySelector('#btnOrder').className = 'mythologs';
-    document.querySelector('.characters').innerHTML = showInfo(mythologs);
+    document.querySelectorAll('.resultados').innerHTML = showInfo(mythologs);
   } if (eventId === 'imgAnimal') {
     document.querySelector('#btnOrder').className = 'animals';
-    document.querySelector('.characters').innerHTML = showInfo(animals);
+    document.querySelectorAll('.resultados').innerHTML = showInfo(animals);
   } if (eventId === 'imgVampire') {
     document.querySelector('#btnOrder').className = 'vampires';
-    document.querySelector('.characters').innerHTML = showInfo(vampires);
+    document.querySelectorAll('.resultados').innerHTML = showInfo(vampires);
   } if (eventId === 'imgRobot') {
     document.querySelector('#btnOrder').className = 'robots';
-    document.querySelector('.characters').innerHTML = showInfo(robots);
+    document.querySelectorAll('.resultados').innerHTML = showInfo(robots);
   } if (eventId === 'imgCronenberg') {
     document.querySelector('#btnOrder').className = 'cronenbergs';
-    document.querySelector('.characters').innerHTML = showInfo(cronenbergs);
+    document.querySelectorAll('.resultados').innerHTML = showInfo(cronenbergs);
   } if (eventId === 'imgDiseas') {
     document.querySelector('#btnOrder').className = 'diseases';
-    document.querySelector('.characters').innerHTML = showInfo(diseases);
+    document.querySelectorAll('.resultados').innerHTML = showInfo(diseases);
   } if (eventId === 'imgParasito') {
     document.querySelector('#btnOrder').className = 'parasites';
-    document.querySelector('.characters').innerHTML = showInfo(parasites);
+    document.querySelectorAll('.resultados').innerHTML = showInfo(parasites);
+
   }
 }
 
@@ -133,5 +139,5 @@ imgCharacters.forEach((elem) => {
     sortedByName = sortAnythingByName(parasites);
   }
   document.querySelector('#resultados').innerHTML = '';
-  document.querySelector('resultados').textContent = showInfo(sortedByName);
+  document.querySelectorAll('#resultados').innerHTML = showInfo(sortedByName);
 })
