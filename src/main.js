@@ -73,6 +73,7 @@ document.querySelector('#btnFin').addEventListener('click', () => {
   document.querySelector('#inicio').classList.remove('esconder');
   document.querySelector('#btnFin').classList.add('esconder');
 });
+
 // funcion para ejecutar el e.currentTarget
 function newFunction(event) {
   const eventId = event.currentTarget.id;
@@ -92,6 +93,8 @@ function newFunction(event) {
   if (eventId === 'imgHumanoide') {
     document.querySelector('#btnOrder').className = 'humanoids';
     document.querySelectorAll('#resultados').innerHTML = showInfo(humanoids);
+
+    document.querySelectorAll('#resultados').innerHTML = showInfo(parasites);
   }
   if (eventId === 'imgUnknown') {
     document.querySelector('#btnOrder').className = 'unknowns';
@@ -128,7 +131,6 @@ function newFunction(event) {
   if (eventId === 'imgParasito') {
     document.querySelector('#btnOrder').className = 'parasites';
     document.querySelectorAll('#resultados').innerHTML = showInfo(parasites);
-
   }
 }
 
@@ -141,6 +143,7 @@ imgCharacters.forEach((elem) => {
 idBotton.addEventListener('click', (event) => {
   let sortedByName = [];
   const eventClassName = event.currentTarget.className;
+  
   if (eventClassName === 'humans') {
     sortedByName = sortAnythingByName(humans);
   }
