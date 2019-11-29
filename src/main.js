@@ -27,6 +27,41 @@ const showInfo = (showTypes) => {
     document.querySelector('#resultados').appendChild(allTypes);
   }
 };
+//boton buscador 
+const formulario = document.querySelector('#formulario');
+const resultado = document.querySelector('#resultados');
+const noResultado = document.querySelector('#no_result');
+//funcion search
+const search = () => {
+  event.preventDefault()
+  // Array de resultados de la busqueda para showInfo
+  let characters = []
+  //Obteniendo informacion del usuario
+  const texto = formulario.value.toLowerCase();
+  //Loop dataSet
+  for (let character of dataSet.results) {
+    //Busca el nombre del dataSet.results y lo convierte a minusculas
+    let characterLowerCase = character.name.toLowerCase();
+    //Comparando resultados (si es completamente igual a 0 si lo encontro)
+    if (characterLowerCase.indexOf(texto) === 0) {
+      //limpiando pantalla de resultados
+      resultado.innerHTML = '';
+      //agregando el resultado a la posicion 0 del array vacio (characters)
+      characters[0] = character;
+
+      document.querySelector('#inicio').classList.add('esconder');
+      document.querySelector('#resultados').classList.remove('esconder');
+      document.querySelectorAll('#resultados').innerHTML = showInfo(characters);
+      break;
+    }   
+  }
+  //Si el array esta vacio (longitud = 0) no se encontro el personaje
+  if (characters.length === 0){
+    //noResultado.innerHTML = 'Not found';
+  }
+}
+document.querySelector('#search').addEventListener('click', search)
+
 // traer contenedor de especies y ocultar primer pantalla de inicio
 document.querySelector('#btnInicio').addEventListener('click', () => {
   document.querySelector('#inicio').classList.add('esconder');
@@ -34,58 +69,65 @@ document.querySelector('#btnInicio').addEventListener('click', () => {
 });
 document.querySelector('#btnFin').addEventListener('click', () => {
   document.querySelector('#contenedor').classList.add('esconder');
-  document.querySelector('#resultados').classList.add('esconder');
+  document.querySelector('#resultados').classList.remove('esconder');
   document.querySelector('#inicio').classList.remove('esconder');
-});
-
-document.querySelector('#btnFin').addEventListener('click', () => {	
-    document.querySelector('#contenedor').classList.add('esconder');	
-    document.querySelector('#resultados').classList.add('esconder');		
-    document.querySelector('#inicio').classList.remove('esconder');
+  document.querySelector('#btnFin').classList.add('esconder');
 });
 // funcion para ejecutar el e.currentTarget
 function newFunction(event) {
   const eventId = event.currentTarget.id;
   idContainer.classList.add('esconder');
+  document.querySelector('#btnFin').classList.remove('esconder');
   // aqui traemos la data de humanos
   document.querySelector('#resultados').classList.remove('esconder');
   event.preventDefault()
   if (eventId === 'imgHumano') {
     document.querySelector('#btnOrder').className = 'humans';
     document.querySelectorAll('#resultados').innerHTML = showInfo(humans);
-  } if (eventId === 'imgAlien') {
+  }
+  if (eventId === 'imgAlien') {
     document.querySelector('#btnOrder').className = 'aliens';
     document.querySelectorAll('#resultados').innerHTML = showInfo(aliens);
-  } if (eventId === 'imgHumanoide') {
+  }
+  if (eventId === 'imgHumanoide') {
     document.querySelector('#btnOrder').className = 'humanoids';
-    document.querySelectorAll('.resultados').innerHTML = showInfo(humanoids);
-  } if (eventId === 'imgUnknown') {
+    document.querySelectorAll('#resultados').innerHTML = showInfo(humanoids);
+  }
+  if (eventId === 'imgUnknown') {
     document.querySelector('#btnOrder').className = 'unknowns';
-    document.querySelectorAll('.resultados').innerHTML = showInfo(unknowns);   
-  } if (eventId === 'imgPoopybutthole') {
+    document.querySelectorAll('#resultados').innerHTML = showInfo(unknowns);
+  }
+  if (eventId === 'imgPoopybutthole') {
     document.querySelector('#btnOrder').className = 'poopybuttholes';
-    document.querySelectorAll('.resultados').innerHTML = showInfo(poopybuttholes);
-  } if (eventId === 'imgMytholog') {
+    document.querySelectorAll('#resultados').innerHTML = showInfo(poopybuttholes);
+  }
+  if (eventId === 'imgMytholog') {
     document.querySelector('#btnOrder').className = 'mythologs';
-    document.querySelectorAll('.resultados').innerHTML = showInfo(mythologs);
-  } if (eventId === 'imgAnimal') {
+    document.querySelectorAll('#resultados').innerHTML = showInfo(mythologs);
+  }
+  if (eventId === 'imgAnimal') {
     document.querySelector('#btnOrder').className = 'animals';
-    document.querySelectorAll('.resultados').innerHTML = showInfo(animals);
-  } if (eventId === 'imgVampire') {
+    document.querySelectorAll('#resultados').innerHTML = showInfo(animals);
+  }
+  if (eventId === 'imgVampire') {
     document.querySelector('#btnOrder').className = 'vampires';
-    document.querySelectorAll('.resultados').innerHTML = showInfo(vampires);
-  } if (eventId === 'imgRobot') {
+    document.querySelectorAll('#resultados').innerHTML = showInfo(vampires);
+  }
+  if (eventId === 'imgRobot') {
     document.querySelector('#btnOrder').className = 'robots';
-    document.querySelectorAll('.resultados').innerHTML = showInfo(robots);
-  } if (eventId === 'imgCronenberg') {
+    document.querySelectorAll('#resultados').innerHTML = showInfo(robots);
+  }
+  if (eventId === 'imgCronenberg') {
     document.querySelector('#btnOrder').className = 'cronenbergs';
-    document.querySelectorAll('.resultados').innerHTML = showInfo(cronenbergs);
-  } if (eventId === 'imgDiseas') {
+    document.querySelectorAll('#resultados').innerHTML = showInfo(cronenbergs);
+  }
+  if (eventId === 'imgDiseas') {
     document.querySelector('#btnOrder').className = 'diseases';
-    document.querySelectorAll('.resultados').innerHTML = showInfo(diseases);
-  } if (eventId === 'imgParasito') {
+    document.querySelectorAll('#resultados').innerHTML = showInfo(diseases);
+  }
+  if (eventId === 'imgParasito') {
     document.querySelector('#btnOrder').className = 'parasites';
-    document.querySelectorAll('.resultados').innerHTML = showInfo(parasites);
+    document.querySelectorAll('#resultados').innerHTML = showInfo(parasites);
 
   }
 }
@@ -96,7 +138,7 @@ imgCharacters.forEach((elem) => {
   });
 });
 
-  idBotton.addEventListener('click', (event) => {
+idBotton.addEventListener('click', (event) => {
   let sortedByName = [];
   const eventClassName = event.currentTarget.className;
   if (eventClassName === 'humans') {

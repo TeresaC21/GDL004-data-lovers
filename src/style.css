@@ -1,7 +1,8 @@
 .esconder {
   display: none !important;
 }
-body{
+body, html{
+  height: 100%;
   background-color: white;
   margin: 0%;
 }
@@ -91,9 +92,9 @@ body{
 #inicio {
   /* background-image: url('img/espacio.jpeg');*/
   /* background-image: url('img/espacio3d1.gif');*/
-  background-image: url('img/rick.png');
-  min-height: 90vh;
-  min-width: 100vh;
+  background-image: url('img/Rick-and-Morty-portal-tv-show.jpg');
+  min-height: 100%;
+  min-width: 100%;
   background-color: #cccccc;
   background-position: center;
   background-size: cover;
@@ -109,7 +110,7 @@ body{
   background-color: transparent;
 }
 
-#btnInicio {
+#btnInicio, #formulario {
   background-color: gray;
   border-color: #290025;
   border-radius: 9px;
@@ -121,17 +122,42 @@ body{
   animation-iteration-count: infinite;
   position: absolute;
   top: 10em;
-  left: center;
+  left: 3em;
 }
-
-h2 {
+#search {
+  background-color: gray;
+  border-color: #290025;
+  border-radius: 9px;
+  border-width: medium;
+  font-size: 25px;
+  color: #CB9CF2;
+  animation-name: colorLetra;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  position: absolute;
+  top: 15em;
+  left: 3em;
+}
+#formulario {
+  top: 13em;
+  left: 2.9em;
+  }
+@font-face {
+  font-family:get_schwifty;
+  src: url(fuente/get_schwifty.ttf);
+}
+  h2 {
+    font-family: get_schwifty;
   margin-right: 15rem;
-  font-size: 30px;
-  color: gray;
+  font-size: 5rem;
+  color: rgb(44, 230, 44);
   animation-duration: 3s;
   animation-name: slidein;
   animation-direction: alternate;
-}
+  position: absolute;
+  top: 10px;
+  left: 5px;
+} 
 
 #contenedor {
   position: relative;
