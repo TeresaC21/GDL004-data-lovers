@@ -110,10 +110,7 @@ function newFunction(event) {
     document.querySelector('#btnOrder').className = 'aliens';
     document.querySelectorAll('#resultados').innerHTML = showInfo(aliens);
   }
-  if (eventId === 'imgHumanoide') {
-    document.querySelector('#btnOrder').className = 'humanoids';
-    document.querySelectorAll('#resultados').innerHTML = showInfo(humanoids);
-  }
+
   if (eventId === 'imgUnknown') {
     document.querySelector('#btnOrder').className = 'unknowns';
     document.querySelectorAll('#resultados').innerHTML = showInfo(unknowns);
@@ -150,6 +147,10 @@ function newFunction(event) {
     document.querySelector('#btnOrder').className = 'parasites';
     document.querySelectorAll('#resultados').innerHTML = showInfo(parasites);
   }
+  if (eventId === 'imgHumanoide') {
+    document.querySelector('#btnOrder').className = 'humanoids';
+    document.querySelectorAll('#resultados').innerHTML = showInfo(humanoids);
+  }
 }
 
 imgCharacters.forEach((elem) => {
@@ -167,9 +168,6 @@ idBotton.addEventListener('click', (event) => {
   }
   if (eventClassName === 'aliens') {
     sortedByName = sortAnythingByName(aliens);
-  }
-  if (eventClassName === 'humanoids') {
-    sortedByName = sortAnythingByName(humanoids);
   }
   if (eventClassName === 'unknowns') {
     sortedByName = sortAnythingByName(unknowns);
@@ -200,6 +198,9 @@ idBotton.addEventListener('click', (event) => {
   }
   if (eventClassName === 'parasites') {
     sortedByName = sortAnythingByName(parasites);
+  }
+  if (eventClassName === 'humanoids') {
+    sortedByName = sortAnythingByName(humanoids);
   }
   document.querySelector('#resultados').innerHTML = '';
   document.querySelectorAll('#resultados').innerHTML = showInfo(sortedByName);
