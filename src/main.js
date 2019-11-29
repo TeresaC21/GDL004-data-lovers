@@ -38,6 +38,7 @@ document.querySelector('#btnFin').addEventListener('click', () => {
     document.querySelector('#resultados').classList.add('esconder');		
     document.querySelector('#inicio').classList.remove('esconder');
 });
+
 // funcion para ejecutar el e.currentTarget
 function newFunction(event) {
   const eventId = event.currentTarget.id;
@@ -53,34 +54,34 @@ function newFunction(event) {
     document.querySelectorAll('#resultados').innerHTML = showInfo(aliens);
   } if (eventId === 'imgHumanoide') {
     document.querySelector('#btnOrder').className = 'humanoids';
-    document.querySelectorAll('.resultados').innerHTML = showInfo(humanoids);
+    document.querySelectorAll('#resultados').innerHTML = showInfo(humanoids);
   } if (eventId === 'imgUnknown') {
     document.querySelector('#btnOrder').className = 'unknowns';
-    document.querySelectorAll('.resultados').innerHTML = showInfo(unknowns);   
+    document.querySelectorAll('#resultados').innerHTML = showInfo(unknowns);   
   } if (eventId === 'imgPoopybutthole') {
     document.querySelector('#btnOrder').className = 'poopybuttholes';
-    document.querySelectorAll('.resultados').innerHTML = showInfo(poopybuttholes);
+    document.querySelectorAll('#resultados').innerHTML = showInfo(poopybuttholes);
   } if (eventId === 'imgMytholog') {
     document.querySelector('#btnOrder').className = 'mythologs';
-    document.querySelectorAll('.resultados').innerHTML = showInfo(mythologs);
+    document.querySelectorAll('#resultados').innerHTML = showInfo(mythologs);
   } if (eventId === 'imgAnimal') {
     document.querySelector('#btnOrder').className = 'animals';
-    document.querySelectorAll('.resultados').innerHTML = showInfo(animals);
+    document.querySelectorAll('#resultados').innerHTML = showInfo(animals);
   } if (eventId === 'imgVampire') {
     document.querySelector('#btnOrder').className = 'vampires';
-    document.querySelectorAll('.resultados').innerHTML = showInfo(vampires);
+    document.querySelectorAll('#resultados').innerHTML = showInfo(vampires);
   } if (eventId === 'imgRobot') {
     document.querySelector('#btnOrder').className = 'robots';
-    document.querySelectorAll('.resultados').innerHTML = showInfo(robots);
+    document.querySelectorAll('#resultados').innerHTML = showInfo(robots);
   } if (eventId === 'imgCronenberg') {
     document.querySelector('#btnOrder').className = 'cronenbergs';
-    document.querySelectorAll('.resultados').innerHTML = showInfo(cronenbergs);
+    document.querySelectorAll('#resultados').innerHTML = showInfo(cronenbergs);
   } if (eventId === 'imgDiseas') {
     document.querySelector('#btnOrder').className = 'diseases';
-    document.querySelectorAll('.resultados').innerHTML = showInfo(diseases);
+    document.querySelectorAll('#resultados').innerHTML = showInfo(diseases);
   } if (eventId === 'imgParasito') {
     document.querySelector('#btnOrder').className = 'parasites';
-    document.querySelectorAll('.resultados').innerHTML = showInfo(parasites);
+    document.querySelectorAll('#resultados').innerHTML = showInfo(parasites);
   }
 }
 
@@ -93,6 +94,7 @@ imgCharacters.forEach((elem) => {
 idBotton.addEventListener('click', (event) => {
   let sortedByName = [];
   const eventClassName = event.currentTarget.className;
+  
   if (eventClassName === 'humans') {
     sortedByName = sortAnythingByName(humans);
   }
