@@ -23,7 +23,7 @@ const showInfo = (showTypes) => {
   for (let i = 0; i < showTypes.length; i++) {
     const allTypes = document.createElement('div');
     allTypes.className = 'characters';
-    allTypes.innerHTML = `<img src=${showTypes[i].image}></img>` + `<p>Name: ${showTypes[i].name}</p>` + `<p>Specie: ${showTypes[i].species}</p>` + `<p>Status: ${showTypes[i].status}</p>` + `<p>Gender: ${showTypes[i].gender}</p`;
+    allTypes.innerHTML = `<img src=${showTypes[i].image}></img>`+`<p>Name: ${showTypes[i].name}</p>`+`<p>Specie: ${showTypes[i].species}</p>`+`<p>Status: ${showTypes[i].status}</p>`+`<p>Gender: ${showTypes[i].gender}</p`;
     document.querySelector('#resultados').appendChild(allTypes);
   }
 };
@@ -62,6 +62,26 @@ const search = () => {
 }
 document.querySelector('#search').addEventListener('click', search)
 
+function dinButton () {
+  //aquí instanciamos al componente padre
+  let resultados = document.getElementById("resultados");
+  //aquí agregamos el componente de tipo input
+  let input = document.createElement("INPUT");
+  input.className = 'inputStyle';
+  //aquí indicamos que es un input de tipo button
+  input.type = 'button';
+  //y por ultimo agreamos el componente creado al padre
+  resultados.appendChild(input);
+}
+window.onload = function(){
+  //Aquí referenciamos el botón que realizara la acción
+  let search = document.querySelector('#search').addEventListener('click', dinButton)
+}
+// Agregando funcion a boton dinamico (ir a inicio)
+
+
+
+
 // traer contenedor de especies y ocultar primer pantalla de inicio
 document.querySelector('#btnInicio').addEventListener('click', () => {
   document.querySelector('#inicio').classList.add('esconder');
@@ -93,8 +113,6 @@ function newFunction(event) {
   if (eventId === 'imgHumanoide') {
     document.querySelector('#btnOrder').className = 'humanoids';
     document.querySelectorAll('#resultados').innerHTML = showInfo(humanoids);
-
-    document.querySelectorAll('#resultados').innerHTML = showInfo(parasites);
   }
   if (eventId === 'imgUnknown') {
     document.querySelector('#btnOrder').className = 'unknowns';
