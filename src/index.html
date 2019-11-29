@@ -6,15 +6,22 @@
   <title>Data Lovers</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+
 </head>
 
 <body>
   <div id="inicio">
     <div>
-      <h2>Welcome!! We invite you to learn more about Rick and Morty </h2>
+      <h2>Rick and Morty</h2>
     </div>
     <input id="btnInicio" class="btnOrder" type="button" name="button" value="Search by specie">
+    <div>
+    <form>
+    <input id="formulario" name="q" type="search" class="form-control" placeholder="Search for character..." required>
+    <button id="search" class="btnBuscar" type="submit">SEARCH</button>
+    </form>
+  </div>
   </div>
 
   <div id="contenedor" class="esconder">
@@ -132,13 +139,14 @@
 
 
   <div>
-    <input id="btnFin" type="button" name="button" value="GO TO HOME">
+
+    <input id="btnFin" type="button" name="button" class="esconder" value="GO TO HOME">
+
   </div>
-  <div id="resultados" class="esconder mostrar">
-
-    <input id="btnOrder" class="btnOrder" type="button" name="button" value="Sort Alphabetically">
   
-
+  <div id="resultados" class="esconder mostrar">
+      <p id="no_result"></p>
+    <input id="btnOrder" class="btnOrder" type="button" name="button" value="Sort Alphabetically">
   </div>
 
   <div id="fin1">
