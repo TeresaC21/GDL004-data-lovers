@@ -32,6 +32,11 @@ document.querySelector('#btnInicio').addEventListener('click', () => {
   document.querySelector('#inicio').classList.add('esconder');
   document.querySelector('#contenedor').classList.remove('esconder');
 });
+document.querySelector('#btnFin').addEventListener('click', () => {
+  document.querySelector('#contenedor').classList.add('esconder');
+  document.querySelector('#resultados').classList.add('esconder');
+  document.querySelector('#inicio').classList.remove('esconder');
+});
 
 document.querySelector('#btnFin').addEventListener('click', () => {	
     document.querySelector('#contenedor').classList.add('esconder');	
@@ -81,7 +86,12 @@ function newFunction(event) {
     document.querySelectorAll('#resultados').innerHTML = showInfo(diseases);
   } if (eventId === 'imgParasito') {
     document.querySelector('#btnOrder').className = 'parasites';
+<<<<<<< HEAD
     document.querySelectorAll('#resultados').innerHTML = showInfo(parasites);
+=======
+    document.querySelectorAll('.resultados').innerHTML = showInfo(parasites);
+
+>>>>>>> 9bed86a0377872fd96476bf24e346ccfaadbd78d
   }
 }
 
@@ -91,7 +101,7 @@ imgCharacters.forEach((elem) => {
   });
 });
 
-idBotton.addEventListener('click', (event) => {
+  idBotton.addEventListener('click', (event) => {
   let sortedByName = [];
   const eventClassName = event.currentTarget.className;
   
