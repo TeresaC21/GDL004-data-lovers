@@ -45,7 +45,6 @@ body, html{
 }
 
 .text {
-  font-family: "Annie Use Your Telescope";
   white-space: nowrap;
   color: black;
   font-size: 40px;
@@ -112,24 +111,20 @@ body, html{
   max-width: 100%;
   background-color: transparent;
 }
-
+.inputStyle{
+  border-color: #290025;
+  border-radius: 9px;
+  border-width: medium;
+  font-size: 15px;
+  color: rgb(44, 230, 44);
+  background-color: gray;
+  width: 200px;
+  height: 30px;
+  position: absolute;
+  top: 5px;
+  left: 6.3rem;
+}
 #btnInicio {
-
-.inputStyle {
-border-color: #290025;
-    border-radius: 9px;
-    border-width: medium;
-    font-size: 26px;
-    color: #CB9CF2;
-    background-color: gray;
-    width: 220px;
-    height: 40px;
-    position: absolute;
-    top: 5px;
-    left: 5px;
-  }
-  
-
   background-color: gray;
   border-color: black;
   border-radius: 9px;
@@ -141,10 +136,9 @@ border-color: #290025;
   animation-iteration-count: infinite;
   position: absolute;
   top: 12em;
-  left: 3em;
+  left: 1.7em;
   
 }
-
 #formulario, #search{
   background-color: transparent;
   border-color: black;
@@ -154,56 +148,53 @@ border-color: #290025;
   color: green;
   position: absolute;
   top: 10em;
-  left: 3em;
+  left: 1.7em;
 }
 #search {
   top: 24em;
-  left: 3em;
+  left: 1.7em;
   background-color: gray;
   color: #CB9CF2;
   animation-name: colorLetra;
   animation-duration: 3s;
   animation-iteration-count: infinite;
-
 }
 #formulario {
   top: 22em;
-  left: 2.9em;
+  left: 1.7em;
   }
   .botonFin{
     border-color: #290025;
     border-radius: 9px;
     border-width: medium;
-    font-size: 26px;
-    color: #CB9CF2;
+    font-size: 15px;
+    color: rgb(44, 230, 44);
     background-color: gray;
-    width: 220px;
-    height: 40px;
+    width: 200px;
+    height: 30px;
     position: absolute;
     top: 5px;
-    left: 5px;
+    left: 6.3rem;
   }
-  .botonOrder{
+  #btnOrder{
     border-color: #290025;
     border-radius: 9px;
     border-width: medium;
-    font-size: 20px;
-    color: #CB9CF2;
-    font-size: 10px;
+    color: rgb(44, 230, 44);
+    font-size: 15px;
     background-color: gray;
-    width: 85px;
-    height: 20px;
+    width: 200px;
+    height: 30px;
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: -37px;
+    left: 6.3rem;
   }
 @font-face {
   font-family:get_schwifty;
   src: url(fuente/get_schwifty.ttf);
 }
   h2 {
-  font-family: get_schwifty;
-  letter-spacing: 8px;
+    font-family: get_schwifty;
   margin-right: 15rem;
   font-size: 5rem;
   color: rgb(44, 230, 44);
@@ -211,17 +202,12 @@ border-color: #290025;
   animation-name: slidein;
   animation-direction: alternate;
   position: absolute;
-  top: 15px;
-  left: 5rem;
+  top: 10px;
+  left: 5px;
 } 
 
 #contenedor {
-  font-family: "Annie Use Your Telescope";
-  font-size: 38px;
-  color: rgb(18, 26, 99);
   position: relative;
-  text-align: center;
-  letter-spacing: 3px;
   padding: auto;
   display: flex;
   align-items: center;
@@ -234,9 +220,6 @@ border-color: #290025;
 }
 
 #resultados {
-  font-family: 'Tajawal', sans-serif;
-  font-size: 20px;
-  color: rgb(18, 26, 99);
   position: relative;
   padding: auto;
   display: flex;
@@ -266,7 +249,6 @@ border-color: #290025;
   margin-bottom: 25px;
 }
 
-
 .modal {
   display: none;
   position: fija;
@@ -293,26 +275,32 @@ border-color: #290025;
   left: 2rem;
 } 
 
-  .botonFin{
-    border-color: #290025;
-    border-radius: 9px;
-    border-width: medium;
-    font-size: 10px;
-    color: #CB9CF2;
-    background-color: white;
-    width: 85px;
-    height: 20px;
-  }
-  .btnOrder{
-    border-color: #290025;
-    border-radius: 9px;
-    border-width: medium;
-    font-size: 10px;
-    color: #CB9CF2;
-    background-color: white;
-    width: 85px;
-    height: 20px;
-  }
+.botonFin{
+  border-color: #290025;
+  border-radius: 9px;
+  border-width: medium;
+  font-size: 10px;
+  color: rgb(44, 230, 44);
+  background-color: gray;
+  width: 170px;
+  height: 20px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+#btnOrder{
+  border-color: #290025;
+  border-radius: 9px;
+  border-width: medium;
+  color: rgb(44, 230, 44);
+  font-size: 10px;
+  background-color: gray;
+  width: 170px;
+  height: 20px;
+  position: absolute;
+  top: -37px;
+  left: 5px;
+}
   #btnInicio {
     background-color: gray;
     border-color: black;
