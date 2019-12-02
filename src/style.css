@@ -91,8 +91,6 @@ body, html{
 }
 
 #inicio {
-  /* background-image: url('img/espacio.jpeg');*/
-  /* background-image: url('img/espacio3d1.gif');*/
   background-image: url('img/Rick-and-Morty-portal-tv-show.jpg');
   min-height: 100%;
   min-width: 100%;
@@ -111,11 +109,25 @@ body, html{
   max-width: 100%;
   background-color: transparent;
 }
-.inputStyle{
+
+#no_result {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: transparent;
+  border-color: black;
+  border-radius: 9px;
+  border-width: medium;
+  font-size: 26px;
+  color: green;
+  position: absolute;
+  top: 20.4em;
+  left: 13.4em;
+}
+.inputStyle {
+  font-family: Arial, Helvetica, sans-serif;
   border-color: #290025;
   border-radius: 9px;
   border-width: medium;
-  font-size: 15px;
+  font-size: 20px;
   color: rgb(44, 230, 44);
   background-color: gray;
   width: 200px;
@@ -124,7 +136,7 @@ body, html{
   top: 5px;
   left: 6.3rem;
 }
-#btnInicio {
+  #btnInicio {
   background-color: gray;
   border-color: black;
   border-radius: 9px;
@@ -337,8 +349,6 @@ body, html{
     left: 2.9em;
     }
     #inicio {
-      /* background-image: url('img/espacio.jpeg');*/
-      /* background-image: url('img/espacio3d1.gif');*/
       background-image: url('img/rick-morty-cel.jpg');
       min-height: 100%;
       min-width: 100%;
