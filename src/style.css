@@ -123,11 +123,10 @@ body, html{
   left: 13.4em;
 }
 .inputStyle {
-  font-family: Arial, Helvetica, sans-serif;
   border-color: #290025;
   border-radius: 9px;
   border-width: medium;
-  font-size: 20px;
+  font-size: 15px;
   color: rgb(44, 230, 44);
   background-color: gray;
   width: 200px;
@@ -219,7 +218,12 @@ body, html{
 } 
 
 #contenedor {
+  font-family: "Annie Use Your Telescope";
+  font-size: 38px;
+  color: rgb(18, 26, 99);
   position: relative;
+  text-align: center;
+  letter-spacing: 3px;
   padding: auto;
   display: flex;
   align-items: center;
@@ -232,6 +236,9 @@ body, html{
 }
 
 #resultados {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 20px;
+  color: rgb(18, 26, 99);
   position: relative;
   padding: auto;
   display: flex;
