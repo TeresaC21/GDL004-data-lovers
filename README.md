@@ -6,7 +6,9 @@
 
       * Imagen final de tu proyecto.
 
-! [img]
+! [img](https://github.com/Biancardona/GDL004-data-lovers/blob/developtere/src/img/proto1.png)
+! [img](https://github.com/Biancardona/GDL004-data-lovers/blob/developtere/src/img/proto2.png)
+! [img](https://github.com/Biancardona/GDL004-data-lovers/blob/developtere/src/img/proto3.png)
 
 ***
 
@@ -23,16 +25,14 @@
 * El objetivo principal es que el usuario pueda interactuar de forma rapida y sencilla para que conozca los personajes de la serie. Servirá mucho ya que existen muchos personajes en dicha serie y el usuario pueda conocerlos de forma sencilla y rapida.
 * En nuestra gama de paletas de colores con la pagina [generate colors](https://coolors.co/89d2dc-6564db-232ed1-101d42-0d1317)
 
-! [img]()
-! [img]()
-! [img]()
-
 ***
 
 ## Primeros bocetos
       **3. Luego colocarás la foto de tu primer prototipo en papel.**
 
-! [img](boceto-uno.jpeg)
+! [img](https://github.com/Biancardona/GDL004-data-lovers/blob/developtere/src/img/protoEsc1.jpeg)
+! [img](https://github.com/Biancardona/GDL004-data-lovers/blob/developtere/src/img/protoEsc2.jpeg)
+! [img](https://github.com/Biancardona/GDL004-data-lovers/blob/developtere/src/img/protoEsc3.jpeg)
 
 ***
 
@@ -46,9 +46,3 @@
 
 ***
 
-##  Boceto final
-      **5. Imagen del prototipo final.**
-
-! [img]()
-
-***
