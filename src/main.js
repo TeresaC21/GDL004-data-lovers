@@ -27,7 +27,7 @@ const showInfo = (showTypes) => {
     document.querySelector('#resultados').appendChild(allTypes);
   }
 };
-//boton buscador 
+//agregando id al boton buscador 
 const formulario = document.querySelector('#formulario');
 const resultado = document.querySelector('#resultados');
 const noResultado = document.querySelector('#no_result');
@@ -70,11 +70,11 @@ function dinButton() {
   //aquí instanciamos al componente padre
   let resultados = document.getElementById("resultados");
   //aquí agregamos el componente de tipo input
-  let input = document.createElement("INPUT");
+  let input = document.createElement("BUTTON");
   input.id = 'dinButon';
   input.className = 'inputStyle';
   //aquí indicamos que es un input de tipo button
-  input.type = 'button';
+ // input.type = 'button';
   input.innerText = 'GO TO HOME';
   //y por ultimo agreamos el componente creado al padre
   resultados.appendChild(input);
