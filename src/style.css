@@ -92,8 +92,6 @@ body, html{
 }
 
 #inicio {
-  /* background-image: url('img/espacio.jpeg');*/
-  /* background-image: url('img/espacio3d1.gif');*/
   background-image: url('img/Rick-and-Morty-portal-tv-show.jpg');
   min-height: 100%;
   min-width: 100%;
@@ -113,23 +111,33 @@ body, html{
   background-color: transparent;
 }
 
-#btnInicio {
-
+#no_result {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: transparent;
+  border-color: black;
+  border-radius: 9px;
+  border-width: medium;
+  font-size: 26px;
+  color: green;
+  position: absolute;
+  top: 20.4em;
+  left: 13.4em;
+}
 .inputStyle {
-border-color: #290025;
-    border-radius: 9px;
-    border-width: medium;
-    font-size: 26px;
-    color: #CB9CF2;
-    background-color: gray;
-    width: 220px;
-    height: 40px;
-    position: absolute;
-    top: 5px;
-    left: 5px;
-  }
-  
-
+  font-family: Arial, Helvetica, sans-serif;
+  border-color: #290025;
+  border-radius: 9px;
+  border-width: medium;
+  font-size: 20px;
+  color: rgb(44, 230, 44);
+  background-color: gray;
+  width: 200px;
+  height: 30px;
+  position: absolute;
+  top: 5px;
+  left: 6.3rem;
+}
+  #btnInicio {
   background-color: gray;
   border-color: black;
   border-radius: 9px;
@@ -144,7 +152,6 @@ border-color: #290025;
   left: 3em;
   
 }
-
 #formulario, #search{
   background-color: transparent;
   border-color: black;
@@ -266,7 +273,6 @@ border-color: #290025;
   margin-bottom: 25px;
 }
 
-
 .modal {
   display: none;
   position: fija;
@@ -349,8 +355,6 @@ border-color: #290025;
     left: 2.9em;
     }
     #inicio {
-      /* background-image: url('img/espacio.jpeg');*/
-      /* background-image: url('img/espacio3d1.gif');*/
       background-image: url('img/rick-morty-cel.jpg');
       min-height: 100%;
       min-width: 100%;
