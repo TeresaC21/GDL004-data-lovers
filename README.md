@@ -31,9 +31,9 @@ Para: Poder conocerlos y ubicarlos.
   
       * Imagen final de tu proyecto.
 
-! [img](https://github.com/Biancardona/GDL004-data-lovers/blob/developtere/src/img/proto1.png)
-! [img](https://github.com/Biancardona/GDL004-data-lovers/blob/developtere/src/img/proto2.png)
-! [img](https://github.com/Biancardona/GDL004-data-lovers/blob/developtere/src/img/proto3.png)
+![alt text](https://github.com/Biancardona/GDL004-data-lovers/blob/developtere/src/img/proto1.png)
+![alt text](https://github.com/Biancardona/GDL004-data-lovers/blob/developtere/src/img/proto2.png)
+![alt text](https://github.com/Biancardona/GDL004-data-lovers/blob/developtere/src/img/proto3.png)
 
 ***
 
@@ -55,9 +55,9 @@ Para: Poder conocerlos y ubicarlos.
 ## Primeros bocetos
       **3. Luego colocarás la foto de tu primer prototipo en papel.**
 
-! [img](https://github.com/Biancardona/GDL004-data-lovers/blob/developtere/src/img/protoEsc1.jpeg)
-! [img](https://github.com/Biancardona/GDL004-data-lovers/blob/developtere/src/img/protoEsc2.jpeg)
-! [img](https://github.com/Biancardona/GDL004-data-lovers/blob/developtere/src/img/protoEsc3.jpeg)
+![alt text](https://github.com/Biancardona/GDL004-data-lovers/blob/developtere/src/img/protoEsc1.jpeg)
+![alt text](https://github.com/Biancardona/GDL004-data-lovers/blob/developtere/src/img/protoEsc2.jpeg)
+![alt text](https://github.com/Biancardona/GDL004-data-lovers/blob/developtere/src/img/protoEsc3.jpeg)
 
 ***
 
