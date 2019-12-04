@@ -259,7 +259,6 @@ document.querySelector('#resultados').innerHTML = '';
 document.querySelectorAll('#resultados').innerHTML = showInfo(sortedByName);
 })
 
-
 //-------------------------CONTENEDOR DATA----------------------------------------
 // traer contenedor de especies y ocultar primer pantalla de inicio
 document.querySelector('#btnInicioData').addEventListener('click', () => {
