@@ -176,12 +176,12 @@
   transition: 0.5s;
   position: absolute;
   top: 1rem;
-  left: 70rem;
+  left: 64rem;
   }
   #formulario {
   position: absolute;
   top: 1rem;
-  left: 56rem;
+  left: 50rem;
   }
   .btn {
   border: none;
@@ -236,7 +236,7 @@
   animation-direction: alternate;
   position: absolute;
   top: 10px;
-  left: 5px;
+  left: 40px;
   } 
   
   #contenedor {
