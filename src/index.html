@@ -16,14 +16,16 @@
     <div>
       <h2>Rick and Morty</h2>
     </div>
-    <input id="btnInicio"  type="button" name="button" value="Search by specie">
+    <input id="btnInicio" type="button" name="button" value="Search by specie">
+    <button id="btnInicioData" type="submit" value="+">All Data</button>
     <div>
-    <form>
-    <input id="formulario" name="q" type="search" class="form-control" placeholder="Search for character..." required>
-    <button id="search" class="btnBuscar" type="submit" value="+">SEARCH</button>
-    <p id="no_result"></p>
-    </form>
-  </div>
+      <form>
+        <input id="formulario" class="btn" name="q" type="search" class="form-control"
+          placeholder="Search for character..." required>
+        <button id="search" class="btnBuscar btn" type="submit" value="+">SEARCH</button>
+        <p id="no_result"></p>
+      </form>
+    </div>
   </div>
 
   <div id="contenedor" class="esconder">
@@ -128,28 +130,28 @@
     </div>
 
     <div id="imgHumanoide" class="imgCharacters">
-        <img class="image" src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/41.jpeg"
-          alt="2">
-        <br><br>
-        <h3>Humanoid</h3>
-        <div class="overlay">
-          <div class="text">Hello, click me</div>
-        </div>
+      <img class="image" src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/41.jpeg"
+        alt="2">
+      <br><br>
+      <h3>Humanoid</h3>
+      <div class="overlay">
+        <div class="text">Hello, click me</div>
       </div>
+    </div>
 
   </div>
 
 
   <div>
-    <input id="btnFin" class="botonFin esconder" type="button" name="button"  value="GO TO HOME">
+    <input id="btnFin" class="botonFin esconder" type="button" name="button" value="GO TO HOME">
+    <button id="myBtn" title="Go to top">Top</button>
   </div>
-  
+
   <div id="resultados" class="esconder mostrar">
     <input id="btnOrder" class="botonOrder" type="button" name="button" value="SORT ALPHABETICALLY">
   </div>
 
-  <div id="fin1">
-
+  <div id="contenedorData" class="esconder">
   </div>
 
   <script type="module" src="main.js"></script>

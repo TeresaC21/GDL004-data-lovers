@@ -2,6 +2,7 @@ import dataSet from './data/rickandmorty/rickandmorty.js';
 
 
 // ********** Filter species **********
+const dataAll = dataSet.results;
 const humans = dataSet.results.filter((human) => human.species === 'Human');
 const aliens = dataSet.results.filter((alien) => alien.species === 'Alien');
 const humanoids = dataSet.results.filter((humanoid) => humanoid.species === 'Humanoid');
@@ -17,23 +18,22 @@ const parasites = dataSet.results.filter((parasite) => parasite.species === 'Par
 const episodes = dataSet.results.filter((episode) => episode.species === 'Episode');
 
 const sortAnythingByName = (array) => {
-  return array.sort((a, b) => ((a.name < b.name) ? -1 : 1));
+return array.sort((a, b) => ((a.name < b.name) ? -1 : 1));
 };
 
 export {
-  humans,
-  aliens,
-  humanoids,
-  unknowns,
-  poopybuttholes,
-  mythologs,
-  animals,
-  vampires,
-  robots,
-  cronenbergs,
-  diseases,
-  parasites,
-  sortAnythingByName,
+dataAll,
+humans,
+aliens,
+humanoids,
+unknowns,
+poopybuttholes,
+mythologs,
+animals,
+vampires,
+robots,
+cronenbergs,
+diseases,
+parasites,
+sortAnythingByName,
 };
-
-
