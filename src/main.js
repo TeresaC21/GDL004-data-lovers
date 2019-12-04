@@ -15,6 +15,7 @@ import {
   sortAnythingByName
 } from './data.js';
 
+
 const imgCharacters = document.querySelectorAll('.imgCharacters');
 const idBotton = document.querySelector('#btnOrder');
 const idContainer = document.querySelector('#contenedor');
@@ -173,6 +174,7 @@ imgCharacters.forEach((elem) => {
 idBotton.addEventListener('click', (event) => {
   let sortedByName = [];
   const eventClassName = event.currentTarget.className;
+
 
   if (eventClassName === 'humans') {
     sortedByName = sortAnythingByName(humans);
